@@ -1,0 +1,18 @@
+.mars-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-select{
+  height: 2rem;
+}
+
+.report-textarea{
+  width: auto;
+  border: 1px solid black;
+  box-shadow: none;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: .5rem;
+  margin: 1rem;
+}

@@ -1,0 +1,56 @@
+.app-container{
+  background-color: #000;
+  color: #fff;
+}
+
+.site-title{
+  text-align: center;
+}
+
+.register-form{
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+.register-form input{
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-shadow: none;
+  height: 2rem;
+  font-size: 1rem;
+  padding-left: .5rem;
+  background: 0 0;
+  color: #fff;
+}
+
+.custom-select select{
+  font-size: 1rem;
+  line-height: 2rem;
+  padding-left: .5rem;
+  color: #fff;
+  background: 0 0;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.site-footer{
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  border: none;
+  padding: 1rem 2rem;
+  background: #000;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.router-link{
+   text-decoration: none;
+   color: #fff;
+}

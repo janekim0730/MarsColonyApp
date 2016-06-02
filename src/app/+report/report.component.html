@@ -1,3 +1,24 @@
-<p>
-  report works!
-</p>
+<div class="app-container">
+    <div class="site-header">
+      <h1 class="site-title">Report Encounters</h1>
+      <p>Safety on Mars is your responsibility</p>
+    </div>
+    <div class="site-content">
+      <form class="mars-form">
+        <select class="custom-select">
+          <option>Ectomorph</option>
+          <option>Endomorph</option>
+          <option>Green Man</option>
+          <option>Grey Man</option>
+          <option>Big-nose-flat-head</option>
+          <option>Octospider</option>
+          <option>Alpha-Draconians</option>
+        </select>
+        <textarea class="report-textarea" name="textarea">
+        </textarea>
+      </form>
+    </div>
+    <div class="site-footer">
+     <button><a [routerLink]="['/encounters']">Submit Report</a></button>
+    </div>
+</div>

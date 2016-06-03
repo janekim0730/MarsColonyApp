@@ -1,0 +1,22 @@
+/* Links */
+
+a {
+	color: #fff;
+	text-decoration: none;
+
+	&:visited {
+		color: #fff;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

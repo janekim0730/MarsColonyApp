@@ -1,7 +1,0 @@
-.app-container{
-  background: linear-gradient( to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%),
-               url('/../images/mars-bkg.jpg') no-repeat center top,
-  background-size: cover, cover;
-  border: 1px solid red;
-  text-align: center;
-}

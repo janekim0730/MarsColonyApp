@@ -1,20 +1,25 @@
 <div class="app-container">
-  <h1>Register</h1>
-  <form #registerForm="ngForm" (ngSubmit)="onSubmit($event)">
-    <div>
-      <label for="name">Name</label>
-      <input ngControl="name" [(ngModel)]="colonist.name" id="name" type="text" required>
-    </div>
-    <div>
-      <label for="age">Age</label>
-      <input ngControl="age" [(ngModel)]="colonist.age" id="age" type="text" required>
-    </div>
-    <div>
-      <label for="occupation">Select Occupation</label>
-      <select ngControl="job" [(ngModel)]="colonist.job_id">
-        <option [value]="null" class="placeholder">Select an Occupation</option>
-        <option *ngFor="let job of occupations" [value]="job.id">{{ job.name }}</option>
-      </select>
-    </div>
-    <button type="submit" [disabled]="noOccupation || !registerForm.form.valid">Submit</button>
-</form>
+  <div class="site-header">
+    <h1>Register</h1>
+  </div>
+    <form #registerForm="ngForm" (ngSubmit)="onSubmit($event)">
+      <div class="register-form">
+        <div class="box names">
+          <input placeholder="Name" ngControl="name" [(ngModel)]="colonist.name" id="name" type="text" required>
+        </div>
+        <div class ="box ages">
+          <input placeholder="Age" ngControl="age" [(ngModel)]="colonist.age" id="age" type="text" required>
+        </div>
+        <div class="box jobs">
+          <label for="occupation">Select Occupation</label>
+          <select ngControl="job" [(ngModel)]="colonist.job_id">
+            <option [value]="null" class="placeholder">Select an Occupation</option>
+            <option *ngFor="let job of occupations" [value]="job.id">{{ job.name }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="site-footer">
+       <button type="submit" [disabled]="noOccupation || !registerForm.form.valid">Submit</button>
+     </div>
+    </form>
+</div>

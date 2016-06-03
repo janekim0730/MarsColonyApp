@@ -11,13 +11,15 @@
 }
 
 .enter-button {
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
+  margin: 1rem;
   background: rgba(237,237,237,.2);
   border-radius: 50%;
-  animation: border-pulse 2s infinite;
+  animation: button-pulse 1.5s infinite;
 
   a{
-    padding: 2rem .2rem;
+    display: block;
+    padding: 2rem;
   }
 }

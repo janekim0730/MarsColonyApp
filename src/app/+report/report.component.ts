@@ -28,7 +28,17 @@ export class ReportComponent implements OnInit {
   }
 
   ngOnInit() : void {
-    this.encounter = new Encounter(this.NO_ALIEN_SELECTED, "date", null , 23);
+    let today = new Date();
+    let day = today.getDate();
+    let month = today.getMonth();
+    let yyyy = today.getFullYear();
+    let dd = "";
+    let mm = "";
+    if(day<10) { dd ="0"+ day }
+    if(month<10) { mm ="0" + month }
+    let date= yyyy + "-" + mm + "-" + dd
+
+    this.encounter = new Encounter(this.NO_ALIEN_SELECTED, date, null , 11);
     this.alienService.getAliens().then( alien => this.aliens = alien);
   }
   onSubmit(event, form) : void {

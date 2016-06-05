@@ -32,7 +32,7 @@ export class RegisterComponent implements OnInit {
     this.colonistService.createColonist(this.colonist)
                         .then( colonist => this.router.navigate(['/encounters']))
 }
-  get noOccupation() : boolean{
+  get noOccupation() : boolean {
     return this.colonist.job_id == this.NO_OCCUPATION_SELECTED;
   }
 }

@@ -1,12 +1,17 @@
 <div class="app-container">
-    <div class="site-header">
+    <div class="encounter-header">
       <h1 class="site-title">Recent Encounters</h1>
       <p>See an Alien? Report it!</p>
     </div>
     <div class="site-content">
-    Encounter-List
+      <ul>
+        <li *ngFor="let lists of encounter">
+          <p>{{lists.date}} - {{lists.atype}}</p>
+          <p>{{lists.action}}</p>
+        </li>
+      </ul>
     </div>
     <div class="site-footer">
-     <button><a [routerLink]="['/report']">Report Encounter</a></button>
+     <button class="submit-button"><a [routerLink]="['/report']">Report Encounter</a></button>
     </div>
 </div>

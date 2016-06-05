@@ -1,0 +1,36 @@
+.site-content{
+  max-height: 70vh;
+  overflow:scroll;
+  overflow-x: hidden;
+
+  ul{
+    padding-left: .5rem;
+  }
+
+  li{
+    list-style-type: none;
+    margin-bottom: 1.5rem;
+  }
+
+  p{
+    text-align: left;
+    font-weight: 100;
+    line-height: 1;
+    margin: 0;
+  }
+}
+
+.encounter-header{
+  background-color: #fff;
+  color: #000;
+  font-weight: 150;
+
+  p{
+    margin-top: 0;
+  }
+}
+
+.site-title{
+  padding-top: 1rem;
+  padding-bottom: 0;
+}

@@ -1,24 +1,18 @@
 <div class="app-container">
-    <div class="site-header">
+    <div class="report-header">
       <h1 class="site-title">Report Encounters</h1>
       <p>Safety on Mars is your responsibility</p>
     </div>
-    <div class="site-content">
-      <form class="mars-form">
-        <select class="custom-select">
-          <option>Ectomorph</option>
-          <option>Endomorph</option>
-          <option>Green Man</option>
-          <option>Grey Man</option>
-          <option>Big-nose-flat-head</option>
-          <option>Octospider</option>
-          <option>Alpha-Draconians</option>
-        </select>
-        <textarea class="report-textarea" name="textarea">
-        </textarea>
-      </form>
-    </div>
-    <div class="site-footer">
-     <button><a [routerLink]="['/encounters']">Submit Report</a></button>
-    </div>
+    <div class="report-content">
+      <form #reportForm="ngForm" (ngSubmit)="onSubmit($event)" class="report-form">
+        <fieldset>
+            <select ngControl="atype" [(ngModel)]="encounter.atype">
+              <option [value]="NO_ALIEN_SELECTED" class="placeholder" for="aliens">Select alien type</option>
+              <option *ngFor="let kind of aliens" [value]="kind.type">{{ kind.type }}</option>
+          </select>
+          <textarea ngControl="reportContent" [(ngModel)]="encounter.action" class="report-textarea" name="textarea" placeholder="Action taken">
+          </textarea>
+       </fieldset>
+         <button class="submit-button" type="submit" [disabled]="noAliens || !reportForm.form.valid">Submit Report</button>
+     </form>
 </div>

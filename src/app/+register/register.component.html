@@ -1,19 +1,19 @@
 <div class="app-container">
   <div class="site-header">
-    <h1>Register</h1>
+    <h1 class="site-title">Register</h1>
   </div>
     <form #registerForm="ngForm" (ngSubmit)="onSubmit($event)">
       <div class="register-form">
         <div class="box names">
-          <input placeholder="Name" ngControl="name" [(ngModel)]="colonist.name" id="name" type="text" required>
+          <input placeholder="Name" ngControl="name" [(ngModel)]="colonist.name" id="name" type="text" required minlength="3">
         </div>
         <div class ="box ages">
           <input placeholder="Age" ngControl="age" [(ngModel)]="colonist.age" id="age" type="text" required>
         </div>
         <div class="box jobs">
           <select ngControl="job" [(ngModel)]="colonist.job_id">
-            <option [value]="NO_OCCUPATION_SELECTED" class="placeholder">Select an Occupation</option>
-            <option *ngFor="let job of occupations" [value]="job.id">{{ job.name | uppercase }}</option>
+            <option class="placeholder" [value]="NO_OCCUPATION_SELECTED">Select an Occupation</option>
+            <option *ngFor="let job of occupations" [value]="job.id">{{ job.name | uppercase}}</option>
           </select>
         </div>
       </div>

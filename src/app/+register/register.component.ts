@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Colonist, IOccupation } from '../shared/models';
 import { ColonistService, OccupationService } from '../shared/services';
 import { NgForm } from '@angular/common';
+import {NgStyle} from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({

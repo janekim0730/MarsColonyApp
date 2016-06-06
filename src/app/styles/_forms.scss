@@ -11,7 +11,6 @@ input[type="submit"]{
 	font-size: 1rem;
 	line-height: 1;
 	text-decoration: none;
-	text-transform: uppercase;
 	border: none;
 
 	&:hover,
@@ -28,11 +27,6 @@ input[type="submit"]{
 	}
 }
 
-.submit-button{
-  font-size: 2rem;
-  padding: 2rem 0;
-  background-color: transparent;
-}
 
 /* Fields */
 

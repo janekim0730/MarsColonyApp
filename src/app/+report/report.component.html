@@ -5,14 +5,12 @@
     </div>
     <div class="report-content">
       <form #reportForm="ngForm" (ngSubmit)="onSubmit($event)" class="report-form">
-        <fieldset>
             <select ngControl="atype" [(ngModel)]="encounter.atype">
-              <option [value]="NO_ALIEN_SELECTED" class="placeholder" for="aliens">Select alien type</option>
-              <option *ngFor="let kind of aliens" [value]="kind.type">{{ kind.type }}</option>
+              <option [value]="NO_ALIEN_SELECTED" class="placeholder" for="aliens">Select Alien Type</option>
+              <option *ngFor="let kind of aliens" [value]="kind.type">{{ kind.type | uppercase }}</option>
           </select>
-          <textarea ngControl="reportContent" [(ngModel)]="encounter.action" class="report-textarea" name="textarea" placeholder="Action taken">
+          <textarea ngControl="reportContent" [(ngModel)]="encounter.action" class="report-textarea" name="textarea" rows="10" placeholder="Action taken">
           </textarea>
-       </fieldset>
          <button class="submit-button" type="submit" [disabled]="noAliens || !reportForm.form.valid">Submit Report</button>
      </form>
 </div>

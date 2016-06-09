@@ -2,10 +2,10 @@
   <div class="site-header">
     <h1 class="site-title">Register</h1>
   </div>
-    <form #registerForm="ngForm" (ngSubmit)="onSubmit($event)">
+    <form name="userForm" #registerForm="ngForm" (ngSubmit)="onSubmit($event)">
       <div class="register-form">
         <div class="box names">
-          <input placeholder="Name" ngControl="name" [(ngModel)]="colonist.name" id="name" type="text" required minlength="3">
+         <input placeholder="Name" ngControl="name" [(ngModel)]="colonist.name" id="name" type="text" ng-minlength="3" ng-maxlength="8" required>
         </div>
         <div class ="box ages">
           <input placeholder="Age" ngControl="age" [(ngModel)]="colonist.age" id="age" type="text" required>
@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="site-footer">
-       <button  class="submit-button" type="submit" [disabled]="noOccupation || !registerForm.form.valid">Submit</button>
+       <button  (click)="showStyle = !showStyle;" class="submit-button" type="submit" [disabled]="noOccupation || !registerForm.form.valid">Submit</button>
      </div>
     </form>
 </div>

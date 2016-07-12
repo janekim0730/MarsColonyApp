@@ -15,8 +15,6 @@
   <body>
     <angular2-project-app>Loading...</angular2-project-app>
 
-
-
       {{#each scripts.polyfills}}<script src="{{.}}"></script>{{/each}}
       <script>
         System.import('system-config.js').then(function () {

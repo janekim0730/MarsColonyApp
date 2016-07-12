@@ -22,5 +22,17 @@
         }).catch(console.error.bind(console));
       </script>
 
+      <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyDP8txu1I0-KHWiWFdCbamKn9XxCTuPZmY",
+          authDomain: "marscolony-angular.firebaseapp.com",
+          databaseURL: "https://marscolony-angular.firebaseio.com",
+          storageBucket: "marscolony-angular.appspot.com",
+        };
+        firebase.initializeApp(config);
+      </script>
+
   </body>
 </html>
